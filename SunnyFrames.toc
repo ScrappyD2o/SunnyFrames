@@ -1,0 +1,24 @@
+## Interface: 110000
+## Title: SunnyFrames
+## Notes: Grid unit frames with standalone config.
+## Author: Delande
+## SavedVariables: SunnyFramesDB
+
+Core/Init.lua
+Core/Utils.lua
+
+Frames/CellWidgets.lua
+Frames/CellCreate.lua
+Frames/CellUpdate.lua
+Frames/Layout.lua
+
+Core/Handle.lua
+
+UI/Widgets.lua
+UI/Colors.lua
+
+UI/Tabs/General.lua
+UI/Tabs/Appearance.lua
+
+UI/Config_Main.lua
+
