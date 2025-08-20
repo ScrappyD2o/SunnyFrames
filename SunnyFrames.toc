@@ -1,24 +1,50 @@
 ## Interface: 110000
 ## Title: SunnyFrames
-## Notes: Grid unit frames with standalone config.
+## Notes: Lightweight party/raid unit frames with profiles and a simple config.
 ## Author: Delande
+## Version: 0.1.0
 ## SavedVariables: SunnyFramesDB
+## SavedVariablesPerCharacter: SunnyFramesDBChar
+## DefaultState: Enabled
+## X-Category: Unit Frames
 
-Core/Init.lua
-Core/Utils.lua
-
-Frames/CellWidgets.lua
-Frames/CellCreate.lua
-Frames/CellUpdate.lua
-Frames/Layout.lua
-
+Core/Core.lua
+Core/CombatQueue.lua
 Core/Handle.lua
+Core/BlizzFrames.lua
+Core/Minimap.lua
+Core/DebugOverlay.lua
+Core/Tooltips.lua
 
-UI/Widgets.lua
-UI/Colors.lua
+# make sure the event hub & click module load early
+Frames/Events.lua
+Frames/Click.lua
+Frames/Layers.lua
 
-UI/Tabs/General.lua
-UI/Tabs/Appearance.lua
+# Elements must load before the first Refresh
+Frames/Elements/Health.lua
+Frames/Elements/Name.lua
+
+# Factory/Roster/Layout/etc.
+Frames/Factory.lua
+Frames/Roster.lua
+Frames/Layout.lua
+Frames/Skin.lua
+Frames/Updates.lua
+Frames/Manager.lua
+Frames/Debug.lua
+
+UI/General_Debug.lua
+
+# Move DB AFTER everything so OnDBReady -> Refresh sees all modules
+Core/DB.lua
+
+API/Public.lua
+Colors.lua
+Widgets.lua
 
 UI/Config_Main.lua
-
+UI/Tabs/General.lua
+UI/Tabs/Appearance.lua
+UI/Tabs/Appearance_Frames.lua
+UI/Tabs/Appearance_Party.lua

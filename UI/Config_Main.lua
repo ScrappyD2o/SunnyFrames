@@ -8,6 +8,10 @@ local function C(name)
     return c[1], c[2], c[3], c[4]
 end
 
+if S.UI and S.UI.SyncPartyFromDB then
+    S.UI.SyncPartyFromDB()
+end
+
 -- Main panel
 local panel = CreateFrame("Frame", "SunnyFramesConfigUI", UIParent, "BackdropTemplate")
 panel:SetFrameStrata("FULLSCREEN_DIALOG")
@@ -113,11 +117,6 @@ end)
 local tabs = {
     { key = "general",    text = "General" },
     { key = "appearance", text = "Appearance" },
-    { key = "names",      text = "Names" },
-    { key = "bars",       text = "Bars" },
-    { key = "layout",     text = "Layout" },
-    { key = "partyraid",  text = "Party/Raid" },
-    { key = "temp",       text = "Temp" },
 }
 
 local nav = CreateFrame("Frame", nil, left)

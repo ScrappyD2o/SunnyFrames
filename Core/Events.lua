@@ -1,0 +1,3 @@
+-- reserved for future shared events
+local ADDON, S = ...
+return {}
